@@ -36,16 +36,5 @@ use python3
   <li>If gender is female, have to substract 500 from value of 5th character to 8th chatacter(765 - 500), then take the month and day accoding to the number of days in each month(January: 31, February: 29, March: 31, April: 30, ...)</li>
 </ul>
 
-#### Pseudocode    
-<b>Algorithm NIC-Decoder(NIC)</b><br/>
-<i>input: NIC, Output: Struct includes birthday and gender</i><br/>
-<ol>
-    <li>nic <- input NIC number(without v)</li>
-    <li>if nic.length != 9 or nic.length != 12 exit and throw error "Wrong nic"</li>
-    <li>if nic.length == 9 then year <- 1900 + str2int(nic[0:1]), temp <- nic[2:4] and goto step 5</li>
-    <li>if nic.length == 12 the year <- str2int(nic[0:3]), temp <- nic[4:6] and goto step 5</li>
-    <li>if temp > 500 then gender <- female else gender <- male</li>
-    <li>if temp > 500 then temp <- temp - 500</li>
-    <li>{month, day} <- monthAndDate(temp)</li>
-    <li>return {{year, month, day}, gender}</li>
-</ol>
+## Other Implementations
+For c++ implementation, please goto [krypto-i9/SL-NIC-Decoder](https://github.com/krypto-i9/SL-NIC-Decoder)
